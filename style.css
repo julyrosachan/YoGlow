@@ -1,0 +1,936 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', medium;
+    text-decoration: none;
+}
+
+/*-- Inspiration taken from abdo steif -->
+/* --> https://codepen.io/abdosteif/pen/bRoyMb?editors=1100*/
+
+/* Navbar section */
+
+
+#mainListDiv li a {
+    font-size: 17px;
+}
+
+#mainListDiv button {
+    width: 100px;
+    height: 50px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+
+}
+
+#mainListDiv button:hover {
+    background-color: #00E676;
+}
+
+.nav {
+    width: 100%;
+    height: 65px;
+    position: fixed;
+    line-height: 65px;
+    text-align: center;
+    z-index: 1000;
+
+}
+
+.logo {
+    float: left;
+    width: auto;
+    height: auto;
+    padding-left: 3rem;
+}
+
+.logo span {
+    color: #00E676;
+    font-size: 1.5em;
+}
+
+.logo a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.nav .logo a:hover {
+    color: #f3f3f3;
+}
+
+.nav div.main_list {
+    height: 65px;
+    float: right;
+}
+
+.nav div.main_list ul {
+    width: 100%;
+    height: 65px;
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav div.main_list ul li {
+    width: auto;
+    height: 65px;
+    padding: 0;
+    padding-right: 3rem;
+}
+
+.nav div.main_list ul li a {
+    text-decoration: none;
+    color: #fff;
+    line-height: 65px;
+    font-size: 2.4rem;
+}
+
+.nav div.main_list ul li a:hover {
+    color: #00E676;
+}
+
+
+/* Home section */
+
+
+.navTrigger {
+    display: none;
+}
+
+.nav {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+
+
+
+
+
+
+
+
+/* Animation */
+/* Inspiration taken from Dicson https://codemyui.com/simple-hamburger-menu-x-mark-animation/ */
+
+.navTrigger {
+    cursor: pointer;
+    width: 30px;
+    height: 25px;
+    margin: auto;
+    position: absolute;
+    right: 30px;
+    top: 0;
+    bottom: 0;
+}
+
+.navTrigger i {
+    background-color: #fff;
+    border-radius: 2px;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4px;
+}
+
+.navTrigger i:nth-child(1) {
+    -webkit-animation: outT 0.8s backwards;
+    animation: outT 0.8s backwards;
+    -webkit-animation-direction: reverse;
+    animation-direction: reverse;
+}
+
+.navTrigger i:nth-child(2) {
+    margin: 5px 0;
+    -webkit-animation: outM 0.8s backwards;
+    animation: outM 0.8s backwards;
+    -webkit-animation-direction: reverse;
+    animation-direction: reverse;
+}
+
+.navTrigger i:nth-child(3) {
+    -webkit-animation: outBtm 0.8s backwards;
+    animation: outBtm 0.8s backwards;
+    -webkit-animation-direction: reverse;
+    animation-direction: reverse;
+}
+
+.navTrigger.active i:nth-child(1) {
+    -webkit-animation: inT 0.8s forwards;
+    animation: inT 0.8s forwards;
+}
+
+.navTrigger.active i:nth-child(2) {
+    -webkit-animation: inM 0.8s forwards;
+    animation: inM 0.8s forwards;
+}
+
+.navTrigger.active i:nth-child(3) {
+    -webkit-animation: inBtm 0.8s forwards;
+    animation: inBtm 0.8s forwards;
+}
+
+@-webkit-keyframes inM {
+    50% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(45deg);
+    }
+}
+
+@keyframes inM {
+    50% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(45deg);
+    }
+}
+
+@-webkit-keyframes outM {
+    50% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(45deg);
+    }
+}
+
+@keyframes outM {
+    50% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(45deg);
+    }
+}
+
+@-webkit-keyframes inT {
+    0% {
+        -webkit-transform: translateY(0px) rotate(0deg);
+    }
+
+    50% {
+        -webkit-transform: translateY(9px) rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: translateY(9px) rotate(135deg);
+    }
+}
+
+@keyframes inT {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(9px) rotate(0deg);
+    }
+
+    100% {
+        transform: translateY(9px) rotate(135deg);
+    }
+}
+
+@-webkit-keyframes outT {
+    0% {
+        -webkit-transform: translateY(0px) rotate(0deg);
+    }
+
+    50% {
+        -webkit-transform: translateY(9px) rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: translateY(9px) rotate(135deg);
+    }
+}
+
+@keyframes outT {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(9px) rotate(0deg);
+    }
+
+    100% {
+        transform: translateY(9px) rotate(135deg);
+    }
+}
+
+@-webkit-keyframes inBtm {
+    0% {
+        -webkit-transform: translateY(0px) rotate(0deg);
+    }
+
+    50% {
+        -webkit-transform: translateY(-9px) rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: translateY(-9px) rotate(135deg);
+    }
+}
+
+@keyframes inBtm {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-9px) rotate(0deg);
+    }
+
+    100% {
+        transform: translateY(-9px) rotate(135deg);
+    }
+}
+
+@-webkit-keyframes outBtm {
+    0% {
+        -webkit-transform: translateY(0px) rotate(0deg);
+    }
+
+    50% {
+        -webkit-transform: translateY(-9px) rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: translateY(-9px) rotate(135deg);
+    }
+}
+
+@keyframes outBtm {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-9px) rotate(0deg);
+    }
+
+    100% {
+        transform: translateY(-9px) rotate(135deg);
+    }
+}
+
+.affix {
+    padding: 0;
+    background-color: #111;
+}
+
+.myH2 {
+    text-align: center;
+    font-size: 4rem;
+}
+
+.myP {
+    text-align: justify;
+    padding-left: 15%;
+    padding-right: 15%;
+    font-size: 20px;
+}
+
+@media all and (max-width:700px) {
+    .myP {
+        padding: 1%;
+    }
+}
+
+
+
+/*? --------------HOME-------------------------- */
+
+
+.banner {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.banner .content {
+    position: relative;
+    z-index: 1;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.banner .content h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 4.5em;
+    text-transform: uppercase;
+    color: #fff;
+
+}
+
+.banner .content h1 span {
+    color: #00E676;
+    font-size: 1.9em;
+}
+
+.banner::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+
+.banner input,
+.banner button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 25px;
+    margin: 10px;
+    outline: none;
+}
+
+.banner input {
+    width: 400px;
+    max-width: 80%;
+}
+
+.banner button {
+    background-color: #00e677bb;
+    color: #fff;
+    font-size: 1em;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.banner button:hover {
+    background-color: #00b35cd3;
+}
+
+.yoga-title {
+    color: #fff;
+    font-size: 4.5em;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeUp 2.2s ease forwards;
+    /* əsas fade-in animasiyası */
+}
+
+/* Nöqtə (top kimi hoppanır) */
+.yoga-title .dot {
+    display: inline-block;
+    color: #00E676;
+    position: relative;
+    bottom: 0;
+    animation: bounceDot 1.2s ease-in-out 1.2s;
+    /* hoppanma animasiyası, 1.3s gecikir */
+}
+
+/* Fade aşağıdan yuxarı */
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Nöqtənin hoppanması */
+@keyframes bounceDot {
+    0% {
+        transform: translateY(0);
+    }
+
+    30% {
+        transform: translateY(-40px);
+    }
+
+    50% {
+        transform: translateY(0);
+    }
+
+    70% {
+        transform: translateY(-25px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+/* 2-ci section - Günün Sözü */
+#daily-quote {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+    font-size: 3em;
+    font-weight: 600;
+    background-color: #ffffff;
+    color: #292727;
+    overflow: hidden;
+    /* animasiya üçün lazımdır */
+    position: relative;
+}
+
+/* Sitat konteyneri - kenardan gələcək */
+.quote-container {
+    opacity: 0;
+    /* əvvəldən görünməsin */
+    transform: translateX(-800px);
+    /* soldan gələcək */
+    transition: all 3s ease;
+    /* yumşaq keçid */
+    text-align: center;
+    /* max-width: 80%; */
+    line-height: 1.5;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+
+    background-color: #00e677d0;
+}
+
+/* görünəndə aktiv sinif əlavə ediləcək */
+.quote-container.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+/*?=============== slider================== */
+
+#yoga {
+    width: 100%;
+    height: 140vh;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    background-image: url(./img/aura.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+}
+
+.yoga-level {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+
+.yoga-level h2 {
+    font-weight: 500;
+}
+
+
+
+.yoga-level span {
+    color: #00E676;
+}
+
+#yoga .slider {
+    margin-top: 80px;
+    position: absolute;
+    width: 130px;
+    height: 180px;
+    top: 10%;
+    left: calc(50% - 100px);
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    animation: autoRun 20s linear infinite;
+
+}
+
+@keyframes autoRun {
+    from {
+        transform: perspective(1000px) rotateX(-10deg) rotateY(0deg);
+    }
+
+    to {
+        transform: perspective(1000px) rotateX(-10deg) rotateY(360deg);
+
+    }
+}
+
+#yoga .slider .item {
+    position: absolute;
+    inset: 0 0 0 0;
+    transform:
+        rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(550px);
+
+}
+
+#yoga .slider .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    backface-visibility: hidden;
+}
+
+
+/* ?====================CARD LIST===================================== */
+.cards-list {
+
+
+    z-index: 0;
+    width: 100%;
+    margin-top: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.card {
+    margin: 20px auto;
+    border-radius: 40px;
+    box-shadow: 5px 5px 30px 7px rgba(0, 0, 0, 0.25), -5px -5px 30px 7px rgba(0, 0, 0, 0.22);
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.card .card_image {
+    width: 300px;
+    height: 200px;
+    border-radius: 40px;
+}
+
+.card .card_image img {
+    width: inherit;
+    height: inherit;
+    border-radius: 40px;
+    object-fit: cover;
+}
+
+.card .card_title {
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    margin-top: -80px;
+    height: 40px;
+    color: #00E676;
+}
+
+.card:hover {
+    transform: scale(0.9, 0.9);
+    box-shadow: 5px 5px 30px 15px rgba(0, 0, 0, 0.25),
+        -5px -5px 30px 15px rgba(0, 0, 0, 0.22);
+}
+
+.title-white {
+    color: white;
+}
+
+.title-black {
+    color: black;
+}
+
+
+
+
+.card {
+    margin: 20px auto;
+    width: 300px;
+    height: 200px;
+    border-radius: 40px;
+    box-shadow: 5px 5px 30px 7px rgba(0, 0, 0, 0.25), -5px -5px 30px 7px rgba(0, 0, 0, 0.22);
+    transition: 0.4s;
+}
+
+
+/* Media qurey section */
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .container {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .navTrigger {
+        display: block;
+    }
+
+    .nav div.logo {
+        font-size: 1em;
+    }
+
+    .nav div.main_list {
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+    }
+
+    .nav div.show_list {
+        height: auto;
+        display: none;
+    }
+
+    .nav div.main_list ul {
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: #111;
+        /*same background color of navbar*/
+        background-position: center top;
+    }
+
+    .nav div.main_list ul li {
+        width: 100%;
+        text-align: right;
+    }
+
+    .nav div.main_list ul li a {
+        text-align: center;
+        width: 100%;
+        font-size: 3rem;
+        padding: 10px;
+    }
+
+    .nav div.media_button {
+        display: block;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    .card-list {
+        /* On small screens, we are no longer using row direction but column */
+        flex-direction: column;
+        width: 100px;
+        height: auto;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+
+    #yoga {
+        background-size: cover;
+        height: auto;
+        width: 100%;
+    }
+
+}
+
+
+/* Section Styling */
+#trainers-section {
+    padding: 70px 5%;
+    background: #fafafa;
+    font-family: "Poppins", sans-serif;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 45px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Container */
+.trainers-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 35px;
+}
+
+/* Card */
+.trainer-card {
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.trainer-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0px 15px 30px rgba(0,0,0,0.10);
+}
+
+/* Image Placeholder */
+.trainer-img {
+    width: 100%;
+    height: 200px;
+    background: #e0e0e0;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.trainer-img img{
+    width: 325px;
+    height: 200px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+
+
+/* Text */
+.trainer-name {
+    font-size: 22px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.trainer-role {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 12px;
+}
+
+.trainer-bio {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+}
+
+
+
+/*************footer start*****************/
+
+.footer {
+    background: #111;
+    color: #fff;
+    padding: 40px 0 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+}
+
+.footer-logo a {
+    font-size: 28px;
+    font-weight: 700;
+    text-decoration: none;
+    color: #fff;
+}
+
+.footer-logo span {
+    color: #00E676;
+}
+
+.footer-logo p {
+    margin-top: 10px;
+    color: #ccc;
+}
+
+.footer-links h4,
+.footer-contact h4,
+.footer-social h4 {
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 8px;
+}
+
+.footer-links ul li a {
+    text-decoration: none;
+    color: #ccc;
+    transition: 0.3s;
+}
+
+.footer-links ul li a:hover {
+    color: #00E676;
+}
+
+.footer-contact p {
+    margin: 6px 0;
+    color: #ccc;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 18px;
+    color: #ccc;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: #00E676;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    color: #888;
+    border-top: 1px solid #333;
+    padding-top: 15px;
+}
+
+
+/*************footer End*****************/

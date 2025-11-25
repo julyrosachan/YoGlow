@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yoga Plans</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: "poppins", sans-serif; background-image: url(./img/aura.jpg); background-repeat: no-repeat;background-size: cover; background-position: center; color: #333; }
+        header { text-align: center; padding: 2rem; }
+        header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+        header p { font-size: 1.2rem; color: #555; }
+        .plans { display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; padding: 2rem; }
+        .plan { background: #fff; padding: 1.5rem; border-radius: 35px; width: 260px; height: 400px; align-items: center; box-shadow: 0 10px 25px rgba(0,0,0,0.1); transition: transform 0.3s, box-shadow 0.3s; }
+        .plan:hover { transform: translateY(-10px); box-shadow: 0 15px 35px rgba(0,0,0,0.2); }
+        .plan h2 { margin-bottom: 0.5rem; font-size: 2rem; }
+        .price { font-size: 1.5rem; color: #00E676; margin-bottom: 1rem; font-weight: bold; }
+        button { background: #00E676; color: #fff; border: none; padding: 0.6rem 1.2rem; border-radius: 15px; cursor: pointer; margin-top: 150px; transition: background 0.3s; }
+        button:hover { background:#00E676; }
+        .details { display: none; margin-top: 1rem; text-align: left; background-color: #ffffff; border-radius: 15px; }
+        .details ul { list-style: disc; margin-left: 1.2rem; }
+        .plan.premium { border-top: 5px solid #a80d0d; }
+        .plan.standard { border-top: 5px solid #2c7c2f; }
+        .plan.nirvana { border-top: 5px solid #561961;} /* Nirvana genişləndi */
+        @media (max-width: 1000px) { .plans { flex-direction: column; align-items: center; } }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Yoga Plans</h1>
+        <p>Choose your perfect yoga plan and start your journey!</p>
+    </header>
+
+    <section class="plans">
+        <div class="plan premium">
+            <h2>Premium</h2>
+            <p class="price">$49 / month</p>
+            <p>Comprehensive yoga plan for daily practice and meditation sessions.</p>
+            <button onclick="toggleDetails('premium')">More Details</button>
+            <div id="premium" class="details">
+                <ul>
+                    <li>Daily 60-minute yoga sessions</li>
+                    <li>Guided meditation every day</li>
+                    <li>Personalized workout plan</li>
+                    <li>Access to premium videos and resources</li>
+                    <li>Diet and wellness tips</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="plan standard">
+            <h2>Standard</h2>
+            <p class="price">Free</p>
+            <p>Intermediate plan for those practicing yoga a few times a week.</p>
+            <button onclick="toggleDetails('standard')">More Details</button>
+            <div id="standard" class="details">
+                <ul>
+                    <li>3 yoga sessions per week</li>
+                    <li>Guided meditation instructions</li>
+                    <li>Basic workout plan</li>
+                    <li>Access to selected videos</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="plan nirvana">
+            <h2>Nirvana</h2>
+            <p class="price">$79 / month</p>
+            <p>The ultimate plan for full flexibility, meditation, and wellness.</p>
+            <button onclick="toggleDetails('nirvana')">More Details</button>
+            <div id="nirvana" class="details">
+                <ul>
+                    <li>Unlimited daily yoga sessions</li>
+                    <li>Advanced meditation programs</li>
+                    <li>Personalized nutrition guidance</li>
+                    <li>Exclusive wellness workshops</li>
+                    <li>One-on-one coaching sessions</li>
+                    <li>Access to all premium content</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function toggleDetails(planId) {
+            const details = document.getElementById(planId);
+            details.style.display = details.style.display === "block" ? "none" : "block";
+        }
+    </script>
+</body>
+</html>
